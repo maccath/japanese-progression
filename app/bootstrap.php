@@ -6,7 +6,9 @@ define('VENDOR_PATH', __DIR__ . '/../vendor/');
 define('TEMPLATES_PATH', __DIR__ . '/../templates/');
 define('DATA_PATH', __DIR__ . '/../data/');
 
-// Autoloader
+// Autoloading
+spl_autoload_extensions(".php");
+spl_autoload_register();
 require VENDOR_PATH . 'autoload.php';
 
 // Configuration
@@ -22,4 +24,16 @@ $config['slim']['view'] = $view;
 
 // Initialise application
 $app = new \Slim\Slim($config['slim']);
-$data = $config['data'];
+
+// Set up Twig globals
+$view->setTemplatesDirectory($app->config('templates.path'));
+foreach ($config['data'] as $key => $value) {
+    $view->getInstance()->addGlobal($key, $value);
+}
+
+// Set up Twig extensions
+$view->getInstance()->addExtension(new \Slim\Views\TwigExtension());
+$view->getInstance()->addExtension(new \App\Views\TwigExtension());
+
+
+
