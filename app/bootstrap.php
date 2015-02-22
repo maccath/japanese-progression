@@ -18,9 +18,8 @@ foreach (glob(CONFIG_PATH . '*.php') as $configFile) {
 // Initialise view
 $view = new \Slim\Views\Twig();
 $view->parserDirectory = 'Twig';
+$config['slim']['view'] = $view;
 
 // Initialise application
-$app = new \Slim\Slim(array(
-    'view'   => $view,
-    'config' => $config,
-));
+$app = new \Slim\Slim($config['slim']);
+$data = $config['data'];
