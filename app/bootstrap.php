@@ -1,8 +1,9 @@
 <?php
 
-define('APP_PATH',    __DIR__.'/./');
-define('CONFIG_PATH', __DIR__.'/config/');
-define('VENDOR_PATH', __DIR__.'/../vendor/');
+define('APP_PATH',       __DIR__.'/./');
+define('CONFIG_PATH',    __DIR__.'/config/');
+define('VENDOR_PATH',    __DIR__.'/../vendor/');
+define('TEMPLATES_PATH', __DIR__.'/../templates/');
 
 // Autoloader
 require VENDOR_PATH.'autoload.php';
