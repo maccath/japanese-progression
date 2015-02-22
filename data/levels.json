@@ -1,0 +1,186 @@
+[
+  {
+    "name": "Basic (N5 Equivalent)",
+    "deadline": "1 December 2014",
+    "description": "I passed this level of the JLPT exam back in 2006. I have restudied this level again anyway to refresh my memory.",
+    "stages": [
+      {
+        "name": "KO2k1 Level 1 Kanji",
+        "description": "The 555 most commonly used kanji",
+        "link": "https://www.coscom.co.jp/ebook/item_2001kanji.html",
+        "items": 555,
+        "complete": 555
+      },
+      {
+        "name": "Basic Grammar",
+        "link": "http://www.guidetojapanese.org/learn/grammar/basic",
+        "description": "All topics under the basic grammar section of Tae Kim's guide",
+        "items": 11,
+        "complete": 11
+      },
+      {
+        "name": "Vocabulary",
+        "link": "",
+        "description": "First 500 vocabulary words from core6k deck using previously learned Kanji",
+        "items": 500,
+        "complete": 500
+      }
+    ]
+  },
+  {
+    "name": "Elementary (N4 Equivalent)",
+    "deadline": "1 January 2015",
+    "description": "I am comfortable that I would be able to pass this level.",
+    "stages": [
+      {
+        "name": "Essential Grammar",
+        "link": "http://www.guidetojapanese.org/learn/grammar/essential",
+        "description": "The first 11 topics under the essential grammar section of Tae Kim's guide",
+        "items": 11,
+        "complete": 11
+      },
+      {
+        "name": "Vocabulary",
+        "link": "",
+        "description": "Second 500 vocabulary words from core6k deck using previously learned Kanji",
+        "items": 500,
+        "complete": 90
+      }
+    ]
+  },
+  {
+    "name": "Lower Intermediate (N3 Equivalent)",
+    "deadline": "1 April 2015",
+    "description": "This is where it starts to get difficult.",
+    "stages": [
+      {
+        "name": "KO2k1 Level 2 Kanji",
+        "description": "The second 555 most commonly used kanji",
+        "link": "https://www.coscom.co.jp/ebook/item_2001kanji.html",
+        "items": 555,
+        "complete": 22
+      },
+      {
+        "name": "Essential Grammar",
+        "link": "http://www.guidetojapanese.org/learn/grammar/essential",
+        "description": "The next 8 topics under the essential grammar section of Tae Kim's guide",
+        "items": 7,
+        "complete": 0
+      },
+      {
+        "name": "Special Grammar",
+        "link": "http://www.guidetojapanese.org/learn/grammar/specialexpressions",
+        "description": "All topics under the special expressions section of Tae Kim's guide",
+        "items": 13,
+        "complete": 0
+      },
+      {
+        "name": "Vocabulary",
+        "description": "The next 1000 vocabulary words from core6k deck using previously learned Kanji",
+        "items": 1000,
+        "complete": 0
+      }
+    ]
+  },
+  {
+    "name": "Upper Intermediate (N2 Equivalent)",
+    "deadline": "1 December 2015",
+    "description": "My aim.",
+    "stages": [
+      {
+        "part": "Part One",
+        "name": "KO2k1 Level 3 Kanji",
+        "link": "https://www.coscom.co.jp/ebook/item_2001kanji.html",
+        "description": "The next 445 less frequently used kanji",
+        "items": 445,
+        "complete": 0
+      },
+      {
+        "part": "Part One",
+        "name": "Kanzen Master Two",
+        "link": "http://shop.whiterabbitjapan.com/products/new-kanzen-master-jlpt-n2-grammar",
+        "description": "Sentence drills using the Kanzen Master N2 grammar book, first ten chapters",
+        "items": 10,
+        "complete": 0
+      },
+      {
+        "part": "Part One",
+        "name": "Vocabulary",
+        "link": "",
+        "description": "The next 1000 vocabulary words from core6k deck using previously learned Kanji",
+        "items": 1000,
+        "complete": 0
+      },
+      {
+        "part": "Part Two",
+        "name": "KO2k1 Level 3 Kanji",
+        "link": "https://www.coscom.co.jp/ebook/item_2001kanji.html",
+        "description": "The final 446 less frequently used joyo kanji",
+        "items": 446,
+        "complete": 0
+      },
+      {
+        "part": "Part Two",
+        "name": "Kanzen Master Two",
+        "link": "http://shop.whiterabbitjapan.com/products/new-kanzen-master-jlpt-n2-grammar",
+        "description": "Sentence drills using the Kanzen Master N2 grammar book, next five chapters",
+        "items": 5,
+        "complete": 0
+      },
+      {
+        "part": "Part Two",
+        "name": "Vocabulary",
+        "link": "",
+        "description": "The next 1000 vocabulary words from core6k deck using previously learned Kanji",
+        "items": 1000,
+        "complete": 0
+      },
+      {
+        "part": "Part Three",
+        "name": "Kanzen Master Two",
+        "link": "http://shop.whiterabbitjapan.com/products/new-kanzen-master-jlpt-n2-grammar",
+        "description": "Sentence drills using the Kanzen Master N2 grammar book, next six chapters",
+        "items": 6,
+        "complete": 0
+      },
+      {
+        "part": "Part Three",
+        "name": "Vocabulary",
+        "link": "",
+        "description": "The next 1000 vocabulary words from core6k deck using previously learned Kanji",
+        "items": 1000,
+        "complete": 0
+      },
+      {
+        "part": "Part Four",
+        "name": "Kanzen Master Two",
+        "link": "http://shop.whiterabbitjapan.com/products/new-kanzen-master-jlpt-n2-grammar",
+        "description": "Sentence drills using the Kanzen Master N2 grammar book, final five chapters",
+        "items": 5,
+        "complete": 0
+      },
+      {
+        "part": "Part Four",
+        "name": "Vocabulary",
+        "link": "",
+        "description": "The final 1000 vocabulary words from core6k deck using previously learned Kanji",
+        "items": 1000,
+        "complete": 0
+      }
+    ]
+  },
+  {
+    "name": "Advanced (N1 Equivalent)",
+    "deadline": false,
+    "description": "Anything I do in here is a bonus. Unsure what it would actually take to achieve N1 (kanzen master 1kyuu book perhaps?!)",
+    "stages": [
+      {
+        "name": "KO2k1 Level 4 Kanji",
+        "link": "https://www.coscom.co.jp/ebook/item_2001kanji.html",
+        "description": "Rare joyo kanji, and commonly used non-joyo kanji",
+        "items": 300,
+        "complete": 0
+      }
+    ]
+  }
+]
