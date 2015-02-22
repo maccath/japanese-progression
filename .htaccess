@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteBase /japanese-progress/
+
+RewriteCond %{REQUEST_URI} ^/japanese-progress/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
