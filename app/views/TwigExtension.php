@@ -3,6 +3,17 @@ namespace App\Views;
 
 class TwigExtension extends \Twig_Extension
 {
+    /**
+     * Returns the name of the extension.
+     *
+     * @return string The extension name
+     */
+    public function getName()
+    {
+        return 'Japanese Progression';
+    }
+
+
     public function getFunctions()
     {
         return array(
