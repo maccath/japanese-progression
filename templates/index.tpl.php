@@ -36,7 +36,9 @@
             <div class="panel-heading">
                 <h3 class="panel-title">
                     {{ level.name }}
+                    {% if level.deadline %}
                     <span class="label label-default status">Deadline: {{ level.deadline }}</span>
+                    {% endif %}
                 </h3>
             </div>
             <div class="panel-body">
