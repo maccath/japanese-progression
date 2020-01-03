@@ -3,7 +3,7 @@
         "psr-4": {"App\\": "app/"}
     },
     "require": {
-        "php": "^7.4",
+        "php": "^7.3",
         "ext-json": "*",
         "slim/slim": "2.*",
         "slim/views": "0.1.*",
