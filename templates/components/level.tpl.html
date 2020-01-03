@@ -1,29 +1,37 @@
 {% use "components/stage.tpl.html" %}
 
 {% block level %}
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">
+<div class="card mb-3">
+    <div class="card-header">
+        {% if level.deadline %}
+        <div class="float-sm-right">
+            <span class="badge badge-secondary">Deadline: {{ level.deadline }}</span>
+        </div>
+        {% endif %}
+        <h3 class="text-sm h5 mt-1">
             {{ level.name }}
-            {% if level.deadline %}
-            <span class="label label-default status">Deadline: {{ level.deadline }}</span>
-            {% endif %}
         </h3>
     </div>
-    <div class="panel-body">
         {% if level.description %}
-        <div class="bs-callout">
-            <p>{{ level.description }}</p>
-        </div>
+        <p class="card-text">
+            {{ level.description }}
+        </p>
         {% endif %}
 
         {% for stage in level.stages %}
             {% if stage.part and stage.part != oldpart %}
-            {% set oldpart = stage.part %}
-            <h4>{{ stage.part }}</h4>
+                {% if oldpart %}</ul>{% endif %}
+                <div class="card-body">
+                    <h4 class="card-title mt-2">{{ stage.part }}</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+            {% elseif not stage.part %}
+                <ul class="list-group list-group-flush">
             {% endif %}
+            {% set oldpart = stage.part %}
+
             {{ block('stage') }}
         {% endfor %}
-    </div>
+        </ul>
 </div>
 {% endblock %}

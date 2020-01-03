@@ -3,9 +3,9 @@
     {% set inProgress = percentage > 0 and percentage < 100 %}
     <div class="progress">
         <div class="{{ html_classes('progress-bar', {
-                'progress-bar-danger': percentage <= 33,
-                'progress-bar-warning': percentage <= 66 and percentage > 33,
-                'progress-bar-success': percentage > 66,
+                'bg-danger': percentage <= 33,
+                'bg-warning': percentage <= 66 and percentage > 33,
+                'bg-success': percentage > 66,
                 'progress-bar-striped': inProgress,
                 'active': inProgress,
              }) }}"
@@ -13,7 +13,7 @@
              aria-valuenow="{{ percentage }}"
              aria-valuemin="0"
              aria-valuemax="100"
-             style="width: {{ percentage }}%">
+             style="width: {{ percentage }}%;">
             <span>{{ progress }} / {{ total }}</span>
         </div>
     </div>
