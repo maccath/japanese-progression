@@ -1,15 +1,12 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+
 define('APP_PATH', __DIR__ . '/./');
 define('CONFIG_PATH', __DIR__ . '/config/');
 define('VENDOR_PATH', __DIR__ . '/../vendor/');
 define('TEMPLATES_PATH', __DIR__ . '/../templates/');
 define('DATA_PATH', __DIR__ . '/../data/');
-
-// Autoloading
-spl_autoload_extensions(".php");
-spl_autoload_register();
-require VENDOR_PATH . 'autoload.php';
 
 // Configuration
 $config = array();
