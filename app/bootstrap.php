@@ -10,7 +10,7 @@ require __DIR__ . '/../vendor/autoload.php';
 define('DATA_PATH', __DIR__ . '/../data/');
 
 // Configuration
-$config = array();
+$config = [];
 foreach (glob(__DIR__ . '/config/*.php') as $configFile) {
     require $configFile;
 }

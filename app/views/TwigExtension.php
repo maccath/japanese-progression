@@ -7,52 +7,43 @@ use Twig\TwigFunction;
 
 class TwigExtension extends AbstractExtension
 {
-    /**
-     * Returns the name of the extension.
-     *
-     * @return string The extension name
-     */
-    public function getName()
-    {
-        return 'Japanese Progression';
-    }
-
-
     public function getFunctions()
     {
-        return array(
-            new TwigFunction('progressColour', array($this, 'progressColour')),
-            new TwigFunction('percentage', array($this, 'percentage')),
-        );
+        return [
+            new TwigFunction('progressColour', [$this, 'progressColour']),
+            new TwigFunction('percentage', [$this, 'percentage']),
+        ];
     }
 
     /**
      * Change the progress bar colour depending on the percentage total
      *
-     * @param $percentage
+     * @param float $percentage
      *
      * @return string
      */
-    public function progressColour($percentage)
+    public function progressColour(float $percentage): string
     {
         if ($percentage < 33) {
             return 'danger';
-        } else if ($percentage < 66) {
-            return 'warning';
-        } else {
-            return 'success';
         }
+
+        if ($percentage < 66) {
+            return 'warning';
+        }
+
+        return 'success';
     }
 
     /**
-     * Calculate the percentage that $amount occupies of $total
+     * Calculate the percentage of $total that $amount is.
      *
-     * @param $amount
-     * @param $total
+     * @param int $amount
+     * @param int $total
      *
      * @return float
      */
-    public function percentage($amount, $total)
+    public function percentage(int $amount, int $total): float
     {
         return 100 / $total * $amount;
     }
