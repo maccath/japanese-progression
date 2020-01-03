@@ -1,5 +1,8 @@
 <?php
 
+use App\Views\TwigExtension;
+use Slim\Factory\AppFactory;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 define('APP_PATH', __DIR__ . '/./');
@@ -14,23 +17,20 @@ foreach (glob(CONFIG_PATH . '*.php') as $configFile) {
     require $configFile;
 }
 
-// Initialise view
-$view = new \Slim\Views\Twig();
-$view->parserDirectory = 'Twig';
-$config['slim']['view'] = $view;
-
 // Initialise application
-$app = new \Slim\Slim($config['slim']);
+$app = AppFactory::create();
+
+// Initialise Twig
+$loader = new \Twig\Loader\FilesystemLoader(TEMPLATES_PATH);
+$twig = new \Twig\Environment($loader);
 
 // Set up Twig globals
-$view->setTemplatesDirectory($app->config('templates.path'));
 foreach ($config['data'] as $key => $value) {
-    $view->getInstance()->addGlobal($key, $value);
+    $twig->addGlobal($key, $value);
 }
 
 // Set up Twig extensions
-$view->getInstance()->addExtension(new \Slim\Views\TwigExtension());
-$view->getInstance()->addExtension(new \App\Views\TwigExtension());
 
 
 
+$twig->addExtension(new TwigExtension());

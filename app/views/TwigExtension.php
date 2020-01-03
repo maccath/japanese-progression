@@ -1,7 +1,11 @@
 <?php
+
 namespace App\Views;
 
-class TwigExtension extends \Twig_Extension
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
+
+class TwigExtension extends AbstractExtension
 {
     /**
      * Returns the name of the extension.
@@ -17,8 +21,8 @@ class TwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('progressColour', array($this, 'progressColour')),
-            new \Twig_SimpleFunction('percentage', array($this, 'percentage')),
+            new TwigFunction('progressColour', array($this, 'progressColour')),
+            new TwigFunction('percentage', array($this, 'percentage')),
         );
     }
 
