@@ -1,0 +1,29 @@
+{% use "components/stage.tpl.html" %}
+
+{% block level %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            {{ level.name }}
+            {% if level.deadline %}
+            <span class="label label-default status">Deadline: {{ level.deadline }}</span>
+            {% endif %}
+        </h3>
+    </div>
+    <div class="panel-body">
+        {% if level.description %}
+        <div class="bs-callout">
+            <p>{{ level.description }}</p>
+        </div>
+        {% endif %}
+
+        {% for stage in level.stages %}
+            {% if stage.part and stage.part != oldpart %}
+            {% set oldpart = stage.part %}
+            <h4>{{ stage.part }}</h4>
+            {% endif %}
+            {{ block('stage') }}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

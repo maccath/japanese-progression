@@ -1,0 +1,11 @@
+{% extends "layout.tpl.html" %}
+{% use "components/level.tpl.html" %}
+
+{% block content %}
+<section id="progress">
+    <h2>Current Progress</h2>
+    {% for level in levels %}
+        {{ block('level') }}
+    {% endfor %}
+</section>
+{% endblock %}

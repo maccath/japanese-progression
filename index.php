@@ -15,7 +15,7 @@ $app->get('/', function (Request $request, Response $response) use ($twig) {
 
     $body = $response->getBody();
 
-    $body->write($twig->render('index.tpl.php', $data));
+    $body->write($twig->render('index.tpl.html', $data));
 
     return $response;
 });

@@ -1,0 +1,20 @@
+{% use "components/progressbar.tpl.html" %}
+
+{% block stage %}
+    <div class="row">
+        <div class="col-md-3">
+            <span {% if stage.description %}class="tooltip-hover" data-toggle="tooltip" data-placement="bottom" title="{{ stage.description }}"{% endif %}>
+                {% if stage.link %}<a href="{{ stage.link }}">{% endif %}
+                {{ stage.name }}
+                {% if stage.link %}</a>{% endif %}
+            </span>
+        </div>
+        <div class="col-md-9">
+            {% with %}
+                {% set total = stage.items %}
+                {% set progress = stage.complete %}
+                {{ block('progressbar') }}
+            {% endwith %}
+        </div>
+    </div>
+{% endblock %}

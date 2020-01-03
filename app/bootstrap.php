@@ -1,8 +1,9 @@
 <?php
 
-use App\Views\TwigExtension;
+use App\Views\JapaneseProgression;
 use Slim\Factory\AppFactory;
 use Twig\Environment;
+use Twig\Extra\Html\HtmlExtension;
 use Twig\Loader\FilesystemLoader;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -27,7 +28,5 @@ foreach ($config['data'] as $key => $value) {
 }
 
 // Set up Twig extensions
-
-
-
-$twig->addExtension(new TwigExtension());
+$twig->addExtension(new JapaneseProgression());
+$twig->addExtension(new HtmlExtension());
