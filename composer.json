@@ -7,7 +7,7 @@
         "ext-json": "*",
         "slim/slim": "^4",
         "twig/twig": "^3",
-        "slim/psr7": "^0.6.0",
+        "slim/psr7": "^1.4.1",
         "twig/html-extra": "^3.0"
     },
     "require-dev": {
