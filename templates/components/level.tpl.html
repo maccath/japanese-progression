@@ -1,37 +1,38 @@
 {% use "components/stage.tpl.html" %}
 
 {% block level %}
-<div class="card mb-3">
-    <div class="card-header">
+    <h3 class="py-4">
+        {{ level.name }}
         {% if level.deadline %}
-        <div class="float-sm-right">
-            <span class="badge badge-secondary">Deadline: {{ level.deadline }}</span>
-        </div>
+            <small class="text-body-secondary">due {{ level.deadline }}</small>
         {% endif %}
-        <h3 class="text-sm h5 mt-1">
-            {{ level.name }}
-        </h3>
-    </div>
-        {% if level.description %}
-        <p class="card-text">
-            {{ level.description }}
-        </p>
+    </h3>
+
+    <p class="lead">
+        {{ level.description ?? '' }}
+
+        {% if not level.status %}
+        <a class="btn btn-outline-secondary"
+           data-bs-toggle="collapse"
+           href="#level-{{ levelNum }}"
+           role="button"
+           aria-expanded="false"
+           aria-controls="#level-{{ level.name }}"
+        >Show details</a>
+        {% endif %}
+    </p>
+
+    <div class="{{ level.status ? "" : "collapse multi-collapse" }}" id="level-{{ levelNum }}">
+    {% for stage in level.stages %}
+        {% if stage.part and stage.part != oldpart %}
+        <h4 class="py-2">{{ stage.part }}</h4>
         {% endif %}
 
-        {% for stage in level.stages %}
-            {% if stage.part and stage.part != oldpart %}
-                {% if oldpart %}</ul>{% endif %}
-                <div class="card-body">
-                    <h4 class="card-title mt-2">{{ stage.part }}</h4>
-                </div>
-                <ul class="list-group list-group-flush">
-            {% elseif not stage.part %}
-                <ul class="list-group list-group-flush">
-            {% endif %}
-            {% set oldpart = stage.part %}
+        {% set oldpart = stage.part %}
 
+        <div class="grid gap-3">
             {{ block('stage') }}
-        {% endfor %}
-        </ul>
-</div>
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}

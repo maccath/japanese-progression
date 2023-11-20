@@ -1,8 +1,7 @@
-
-
-.progress span {
-    position: absolute;
-    display: block;
+.divider {
     width: 100%;
-    color: black;
+    height: 3rem;
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0 0 0;
+    box-shadow: inset 0 1em 1em rgb(0 0 0 / 25%);
 }
