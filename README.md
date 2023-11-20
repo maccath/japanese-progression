@@ -26,6 +26,10 @@ php -S localhost:8000
 
 The application will be available at [http://localhost:8000](http://localhost:8000/)
 
+<div style="text-align: center;">
+    <img src="docs/screenshot.png" alt="demo screenshot" />
+</div>
+
 ## Unit Tests
 
 Tests are written using PHPUnit and stored under app/tests.
