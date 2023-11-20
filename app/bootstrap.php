@@ -1,6 +1,6 @@
 <?php
 
-use App\Views\JapaneseProgression;
+use App\Twig\Extensions\Percentage;
 use Slim\Factory\AppFactory;
 use Twig\Environment;
 use Twig\Extra\Html\HtmlExtension;
@@ -28,5 +28,5 @@ foreach ($config['data'] as $key => $value) {
 }
 
 // Set up Twig extensions
-$twig->addExtension(new JapaneseProgression());
+$twig->addExtension(new Percentage());
 $twig->addExtension(new HtmlExtension());
