@@ -2,6 +2,7 @@
   {
     "name": "Basic (N5 Equivalent)",
     "deadline": "1 December 2014",
+    "status": "complete",
     "stages": [
       {
         "name": "KO2k1 Level 1 Kanji",
@@ -29,6 +30,7 @@
   {
     "name": "Elementary (N4 Equivalent)",
     "deadline": "1 January 2015",
+    "status": "progress",
     "stages": [
       {
         "name": "Essential Grammar",

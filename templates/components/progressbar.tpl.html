@@ -1,20 +1,21 @@
 {% block progressbar %}
     {% set percentage = percentage(progress, total) %}
     {% set inProgress = percentage > 0 and percentage < 100 %}
-    <div class="progress">
-        <div class="{{ html_classes('progress-bar', {
-                'bg-danger': percentage <= 33,
-                'bg-warning': percentage <= 66 and percentage > 33,
-                'bg-success': percentage > 66,
-                'progress-bar-striped': inProgress,
-                'active': inProgress,
-             }) }}"
-             role="progressbar"
-             aria-valuenow="{{ percentage }}"
-             aria-valuemin="0"
-             aria-valuemax="100"
-             style="width: {{ percentage }}%;">
-            <span>{{ progress }} / {{ total }}</span>
+        <div class="col-8 p-1">
+            <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100" style="height: 30px">
+                <div class="{{ html_classes('progress-bar', {
+                    'bg-danger': percentage <= 33,
+                    'bg-warning': percentage <= 66 and percentage > 33,
+                    'bg-success': percentage > 66,
+                    'progress-bar-striped': inProgress,
+                    'active': inProgress,
+                }) }}"
+                     style="width: {{ percentage }}%;">
+                </div>
+            </div>
         </div>
+    <div class="col-1 p-1">
+        <span>{{ progress }} / {{ total }}</span>
     </div>
+
 {% endblock %}

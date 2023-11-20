@@ -6,27 +6,41 @@
     <title>{{ app.title }}</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) {
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+      });
+    </script>
 </head>
-<body>
+<body data-bs-theme="dark">
 
 <div class="container pt-3">
-
-    <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1 class="display-4">{{ app.title }}</h1>
-        <p class="lead">Studying towards 日本語能力試験 N2 level.</p>
-        <hr class="my-4">
-        <p>Using <a href="http://forum.koohii.com/viewtopic.php?id=5322">Nukemarine's guide</a> and the <a href="http://www.3anet.co.jp/ja/1253/">新完全マスター文法 N２</a> grammar book to track progress.</p>
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="assets/img/holy-gate.svg" alt="Torii Gate" width="100">
+        <h1 class="display-5 fw-bold text-body-emphasis">{{ app.title }}</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Studying towards 日本語能力試験 N2 level.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-secondary btn-lg px-4 gap-3" href="https://forum.koohii.com/viewtopic.php?id=5322">Nukemarine's guide</a>
+            </div>
+        </div>
     </div>
+</div>
 
-    {% block content %}
-    {% endblock %}
+<div class="divider"></div>
 
+<div class="container pt-3">
+{% block content %}
+{% endblock %}
 </div>
 <!-- /container -->
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
 </body>
 </html>

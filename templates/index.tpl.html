@@ -3,9 +3,13 @@
 
 {% block content %}
 <section id="progress">
-    <h2>Current Progress</h2>
+    <h2 class="display-6 py-4">Current Progress</h2>
+    <div class="grid gap-1">
+    {% set levelNum = 1 %}
     {% for level in levels %}
         {{ block('level') }}
+        {% set levelNum = levelNum + 1 %}
     {% endfor %}
+    </div>
 </section>
 {% endblock %}
