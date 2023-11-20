@@ -2,13 +2,13 @@
 
 A simple PHP application that displays Japanese language learning progress.
 
-![GitHub Workflow](https://img.shields.io/github/actions/workflow/status/maccath/japanese-progression/php.yml?style=for-the-badge&logo=github&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP_^8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Composer](https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white)
+[![GitHub Workflow](https://img.shields.io/github/actions/workflow/status/maccath/japanese-progression/php.yml?style=for-the-badge&logo=github&logoColor=white)](https://github.com/maccath/japanese-progression/actions)
+[![PHP](https://img.shields.io/badge/PHP_^8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![Composer](https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white)](https://getcomposer.org)
 
 ## Requirements
-- PHP ^8.2
-- Composer
+- [PHP ^8.2](https://www.php.net/releases/8.2/)
+- [Composer](https://getcomposer.org)
 
 ## Installation
 
